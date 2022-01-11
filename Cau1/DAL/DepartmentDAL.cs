@@ -16,7 +16,7 @@ namespace Cau1.DAL
         {
             SqlConnection conn = CreateConnection();
             conn.Open();
-            SqlCommand cmd = new SqlCommand("SelectAllDepartment", conn)
+            SqlCommand cmd = new SqlCommand("SelectAllDepartment_2119110205", conn)
             {
                 CommandType = CommandType.StoredProcedure
             };
@@ -41,7 +41,7 @@ namespace Cau1.DAL
         {
             SqlConnection conn = CreateConnection();
             conn.Open();
-            SqlCommand cmd = new SqlCommand("SelectDepartment", conn)
+            SqlCommand cmd = new SqlCommand("SelectDepartment_2119110205", conn)
             {
                 CommandType = CommandType.StoredProcedure
             };

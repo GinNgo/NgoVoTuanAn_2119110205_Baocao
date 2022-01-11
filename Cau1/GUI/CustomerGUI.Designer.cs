@@ -131,6 +131,7 @@ namespace Cau1
             this.button4.TabIndex = 48;
             this.button4.Text = "Thêm";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.btNew_Click);
             // 
             // button3
             // 
@@ -140,6 +141,7 @@ namespace Cau1
             this.button3.TabIndex = 47;
             this.button3.Text = "Xóa";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.btDelete_Click);
             // 
             // button2
             // 
@@ -149,6 +151,7 @@ namespace Cau1
             this.button2.TabIndex = 46;
             this.button2.Text = "Sửa";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.btEdit_Click);
             // 
             // button1
             // 
@@ -158,6 +161,7 @@ namespace Cau1
             this.button1.TabIndex = 45;
             this.button1.Text = "Thoát";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Exit_Click);
             // 
             // dgv_Employee
             // 
@@ -177,6 +181,7 @@ namespace Cau1
             this.dgv_Employee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Employee.Size = new System.Drawing.Size(629, 198);
             this.dgv_Employee.TabIndex = 44;
+            this.dgv_Employee.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_RowEnter);
             // 
             // Column3
             // 
@@ -277,6 +282,7 @@ namespace Cau1
             this.Controls.Add(this.cbox);
             this.Name = "Form1";
             this.Text = "Khách hàng";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Employee)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

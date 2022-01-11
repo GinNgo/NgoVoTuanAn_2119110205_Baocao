@@ -15,7 +15,7 @@ namespace Cau1.DAL
         {
             SqlConnection conn = CreateConnection();
             conn.Open();
-            SqlCommand cmd = new SqlCommand("SelectAllEmployee", conn)
+            SqlCommand cmd = new SqlCommand("SelectAllEmployee_2119110205", conn)
             {
                 CommandType = CommandType.StoredProcedure
             };
@@ -54,7 +54,7 @@ namespace Cau1.DAL
             try
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("UpdateEmployee", conn)
+                SqlCommand cmd = new SqlCommand("UpdateEmployee_2119110205", conn)
                 {
                     CommandType = CommandType.StoredProcedure
                 };
@@ -85,7 +85,7 @@ namespace Cau1.DAL
             try
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("DeleteEmployee", conn)
+                SqlCommand cmd = new SqlCommand("DeleteEmployee_2119110205", conn)
                 {
                     CommandType = CommandType.StoredProcedure
                 };
@@ -110,7 +110,7 @@ namespace Cau1.DAL
             try
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("InsertEmployee", conn)
+                SqlCommand cmd = new SqlCommand("InsertEmployee_2119110205", conn)
                 {
                     CommandType = CommandType.StoredProcedure
                 };
