@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace Cau1.DAL
 {
-    class EmployeeBEL
+    public class EmployeeBEL
     {
+        public string IdEmployee { get; set; }
+        public string Name { get; set; }
+        public DateTime DateBirth { get; set; }
+        public bool Gender { get; set; }
+        public string PlaceBirth { get; set; }
+        public DepartmentBEL Department { get; set; }
+        public string NameDepartment
+        {
+            get { return Department.Name; }
+
+        }
     }
 }
