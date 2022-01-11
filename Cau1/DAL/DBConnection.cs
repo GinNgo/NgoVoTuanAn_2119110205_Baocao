@@ -17,7 +17,7 @@ namespace Cau1.DAL
         {
             SqlConnection conn = new SqlConnection
             {
-                ConnectionString = @"Data Source=DELL-PC\SQLEXPRESS;Initial Catalog=HR;User Id=sa;Password=sa"
+                ConnectionString = @"Data Source=LAPTOP-8RK08EOK\SQLEXPRESS;Initial Catalog=HR;User Id=sa;Password=sa"
             };
             return conn;
         }
