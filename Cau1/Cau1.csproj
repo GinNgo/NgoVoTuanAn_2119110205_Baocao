@@ -46,9 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\DBConnection.cs" />
-    <Compile Include="DAL\DepartmentBEL.cs" />
-    <Compile Include="DAL\EmployeeBEL.cs" />
+    <Compile Include="DAL\DepartmentDAL.cs" />
+    <Compile Include="DAL\EmployeeDAL.cs" />
+    <Compile Include="BEL\DBConnection.cs" />
+    <Compile Include="BEL\DepartmentBEL.cs" />
+    <Compile Include="BEL\EmployeeBEL.cs" />
     <Compile Include="GUI\CustomerGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,7 +86,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BAL\" />
-    <Folder Include="BEL\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
