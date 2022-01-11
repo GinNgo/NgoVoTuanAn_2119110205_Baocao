@@ -108,7 +108,39 @@ namespace Cau1
         }
         private void btEdit_Click(object sender, EventArgs e)
         {
+            DataGridViewRow row = dgv_Employee.CurrentRow;
+            if (row != null)
+            {
+                if (txtName.Text == "")
+                {
+                    MessageBox.Show("Bạn cần nhập tên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
 
+                if (txtLocation.Text == "")
+                {
+                    MessageBox.Show("Bạn cần nhập nơi sinh", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                if (txtName.Text != "" & txtLocation.Text != "")
+                {
+                    EmployeeBEL emp = new EmployeeBEL();
+                    emp.IdEmployee = txtMa.Text;
+                    emp.Name = txtName.Text;
+                    emp.DateBirth = txtDate.Value;
+                    emp.Gender = cbox.Checked;
+                    emp.PlaceBirth = txtLocation.Text;
+                    emp.Department = (DepartmentBEL)cbDV.SelectedItem;
+                    empBAL.EditEmployee(emp);
+
+                    row.Cells[0].Value = emp.IdEmployee;
+                    row.Cells[1].Value = emp.Name;
+                    row.Cells[2].Value = emp.DateBirth.ToShortDateString();
+                    row.Cells[3].Value = emp.Gender;
+                    row.Cells[4].Value = emp.PlaceBirth;
+                    row.Cells[5].Value = emp.Department.Name;
+                    MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.None);
+                }
+            }
         }
         private void btDelete_Click(object sender, EventArgs e)
         {
@@ -125,6 +157,13 @@ namespace Cau1
                 empBAL.DeleteEmployee(emp);
                 int idx = dgv_Employee.CurrentCell.RowIndex;
                 dgv_Employee.Rows.RemoveAt(idx);
+                txtMa.Text = "";
+                txtName.Text = "";
+                txtDate.Text = "";
+                cbox.Checked = false;
+                txtLocation.Text = "";
+                cbDV.Text = "";
+                txtMa.Enabled = true;
             }
 
         }
